@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+__pycache__/
+# Raw geo downloads; the processed files in poster/geo/ are committed.
+poster/geo/raw/

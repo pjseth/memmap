@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Julia at 24</title>
+  <meta name="description" content="A memory map of the places Julia went at 24, and the people she shared them with.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4C20 4 11 13 11 25c0 16 21 35 21 35s21-19 21-35C53 13 44 4 32 4z' fill='%23E4572E'/%3E%3Ccircle cx='32' cy='25' r='9' fill='%23FBF5EA'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="map" aria-label="Interactive globe of Julia's year"></div>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <button class="brand" id="brand" title="Back to the whole world">
+      <span class="brand-pin" aria-hidden="true"></span>
+      <span class="brand-text"><b>Julia at 24</b><small>a memory map</small></span>
+    </button>
+    <div class="top-actions">
+      <button class="chip" id="btn-directory" aria-controls="directory"><span aria-hidden="true">☰</span> Friends</button>
+      <button class="chip chip-accent" id="btn-journey"><span aria-hidden="true">▶</span> Journey</button>
+      <div class="seg" role="group" aria-label="Map style">
+        <button id="mode-earth" class="on" aria-pressed="true">Earth</button>
+        <button id="mode-map" aria-pressed="false">Map</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Friends directory -->
+  <aside id="directory" class="drawer drawer-left" aria-label="Friends directory" aria-hidden="true">
+    <div class="drawer-head">
+      <div>
+        <h2>The directory</h2>
+        <p class="muted" id="dir-count"></p>
+      </div>
+      <button class="icon-btn" data-close="directory" aria-label="Close directory">✕</button>
+    </div>
+    <label class="search">
+      <span aria-hidden="true">⌕</span>
+      <input id="dir-search" type="search" placeholder="Find a friend or a place" autocomplete="off">
+    </label>
+    <div id="dir-list" class="dir-list"></div>
+  </aside>
+
+  <!-- Note panel -->
+  <aside id="panel" class="drawer drawer-right" aria-label="Notes" aria-hidden="true">
+    <div class="panel-scroll" id="panel-scroll"></div>
+  </aside>
+
+  <!-- Journey controls -->
+  <nav id="tourbar" class="tourbar" aria-label="Journey controls" hidden>
+    <button class="icon-btn" id="tour-prev" aria-label="Previous stop">‹</button>
+    <div class="tour-mid">
+      <div class="tour-label" id="tour-label"></div>
+      <div class="tour-track" id="tour-track" aria-hidden="true"></div>
+    </div>
+    <button class="icon-btn tour-next" id="tour-next" aria-label="Next stop">›</button>
+    <button class="tour-exit" id="tour-exit">Wander freely</button>
+  </nav>
+
+  <!-- Intro -->
+  <section id="intro" class="overlay" aria-label="Welcome">
+    <div class="intro-card">
+      <p class="eyebrow">for Julia, on turning 25</p>
+      <h1>Julia at <span>24</span></h1>
+      <p class="lede" id="intro-lede"></p>
+      <p class="intro-note">Spin the globe, hover the pins, and open each note. Every pin is a place you went this year, with a message and a photo from the people you went with.</p>
+      <div class="intro-actions">
+        <button class="btn btn-primary" id="start-journey">Start the journey in New York</button>
+        <button class="btn btn-ghost" id="start-roam">Wander on my own</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Finale -->
+  <section id="finale" class="overlay" aria-label="The end" hidden>
+    <div class="intro-card">
+      <p class="eyebrow">that's the whole year</p>
+      <h1>Happy 25th, <span>Julia</span></h1>
+      <p class="lede" id="finale-lede"></p>
+      <p class="finale-names" id="finale-names"></p>
+      <div class="intro-actions">
+        <button class="btn btn-primary" id="finale-roam">Keep exploring</button>
+        <button class="btn btn-ghost" id="finale-again">Take the journey again</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo lightbox -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="icon-btn lb-close" aria-label="Close photo">✕</button>
+    <figure><img alt=""><figcaption></figcaption></figure>
+  </div>
+
+  <div id="hovercard" class="hovercard" hidden></div>
+
+  <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
