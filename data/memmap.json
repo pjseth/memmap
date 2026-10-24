@@ -270,17 +270,17 @@
    "people": [
     {
      "id": 9,
-     "name": "A friend",
+     "name": "Seline",
      "relation": "",
-     "needs_name": true,
+     "needs_name": false,
      "message": [
       "Happy birthday Julia!!! I miss you so, so much. Our annual hangouts are always one of my favorite parts of the year; it warms my heart to see how much change and growth we’ve had in such a short amount of time. No matter where we are in life or how old we’ve become, I would fly anywhere just to sit and share a meal with you"
      ],
      "photos": [
       {
-       "web": "assets/photos/web/09-friend-1.jpg",
-       "thumb": "assets/photos/thumb/09-friend-1.jpg",
-       "print": "assets/photos/print/09-friend-1.jpg",
+       "web": "assets/photos/web/09-seline-1.jpg",
+       "thumb": "assets/photos/thumb/09-seline-1.jpg",
+       "print": "assets/photos/print/09-seline-1.jpg",
        "w": 1200,
        "h": 1600,
        "src_px": 2048,

@@ -1,0 +1,17 @@
+{
+  "name": "memmap-poster",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build_poster.mjs"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "d3-geo-projection": "^4.0.0",
+    "shapefile": "^0.6.6",
+    "topojson-client": "^3.1.0",
+    "topojson-server": "^3.0.1",
+    "topojson-simplify": "^3.0.3",
+    "world-atlas": "^2.0.2"
+  }
+}

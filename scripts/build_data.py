@@ -38,7 +38,7 @@ PEOPLE = {
     6: dict(name="Isabella", photos=["05_Ashna_2.jpg", "05_Ashna_3.jpg"]),
     7: dict(name="LJ", photos=["06_Isabella_1.png"]),
     8: dict(name="Alan", photos=["07_LJ_1.png"]),
-    9: dict(name="A friend", needs_name=True, photos=["08_Alan_1.png"]),
+    9: dict(name="Seline", photos=["08_Alan_1.png"]),
     10: dict(name="Caroline", photos=["09_Wus-Wonton_1.png"]),
     11: dict(name="Zoe", relation="cousin", photos=["10_Caroline_1.png"]),
     12: dict(name="Hannah", relation="cousin", photos=["11_Zoe_1.png"]),

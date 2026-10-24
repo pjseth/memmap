@@ -1,0 +1,6 @@
+# Deploy only the website. Source docs, print photos and PDFs stay local.
+/*
+!index.html
+!assets
+!vercel.json
+assets/photos/print
