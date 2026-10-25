@@ -10,7 +10,8 @@
   const REGION_LABEL = { nyc: "New York City", northeast: "Close to home", world: "Around the world" };
 
   // Places pinned at town/region level get a wider camera.
-  const ZOOM = { chengdu: 10.6, hamptons: 10.2, oley: 12.6, beacon: 13, vancouver: 11.6, usj: 14.8 };
+  const ZOOM = { chengdu: 10.6, hamptons: 10.2, oley: 12.6, beacon: 13, vancouver: 11.6, usj: 14.8,
+                 boston: 11.4, atlantic: 8.4 };
   const WORLD_VIEW = { center: [-25, 32], zoom: 1.45, pitch: 0, bearing: 0 };
   const CLUSTER_PX = 56;
 
@@ -472,7 +473,7 @@
     const photoBlock = photos.length
       ? `<div class="photos ${photos.length === 2 ? "two" : ""}">${photos.map((ph, k) => `
           <figure class="polaroid" data-full="${ph.web}" data-caption="${esc(ph.caption)}">
-            <img src="${ph.web}" alt="${esc(person.name)} with Julia${ph.caption ? `: ${esc(ph.caption)}` : ""}" loading="lazy" width="${ph.w}" height="${ph.h}">
+            <img class="${ph.fit === "contain" ? "fit-whole" : ""}" src="${ph.web}" alt="${esc(person.name)} with Julia${ph.caption ? `: ${esc(ph.caption)}` : ""}" loading="lazy" width="${ph.w}" height="${ph.h}">
             ${ph.caption ? `<figcaption>${esc(ph.caption)}</figcaption>` : ""}
           </figure>`).join("")}</div>`
       : `<div class="no-photo">no photo, just the memory</div>`;

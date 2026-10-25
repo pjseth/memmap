@@ -41,7 +41,7 @@ def place_pages(pdf):
     """Map place number -> page number, from the PDF outline (h2 headings)."""
     reader = PdfReader(pdf)
     titles = {}
-    for p in json.load(open(os.path.join(build_pamphlet.ROOT, "data", "memmap.json")))["places"]:
+    for p in json.load(open(os.path.join(build_pamphlet.ROOT, "data", "memmap.json"), encoding="utf-8"))["places"]:
         titles.setdefault(p["name"], p["num"])
 
     found = {}
@@ -90,7 +90,7 @@ def main():
         pages, fillers = new_pages, fillers + ((-n) % 4)
     else:
         raise SystemExit("page numbers did not settle")
-    n_places = len(json.load(open(os.path.join(build_pamphlet.ROOT, "data", "memmap.json")))["places"])
+    n_places = len(json.load(open(os.path.join(build_pamphlet.ROOT, "data", "memmap.json"), encoding="utf-8"))["places"])
     missing = n_places - len(pages)
     if missing:
         print(f"warning: {missing} places not found in the PDF outline")

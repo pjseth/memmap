@@ -30,6 +30,7 @@
        "w": 1280,
        "h": 960,
        "src_px": 1280,
+       "fit": "",
        "caption": "",
        "original": "02_Marcia_1.jpg"
       }
@@ -52,6 +53,7 @@
        "w": 500,
        "h": 375,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "18_Stella_1.jpg"
       }
@@ -74,6 +76,7 @@
        "w": 1200,
        "h": 1600,
        "src_px": 2048,
+       "fit": "",
        "caption": "",
        "original": "01_Ella_1.png"
       }
@@ -96,6 +99,7 @@
        "w": 1200,
        "h": 1600,
        "src_px": 2048,
+       "fit": "",
        "caption": "",
        "original": "05_Ashna_2.jpg"
       },
@@ -106,6 +110,7 @@
        "w": 1200,
        "h": 1600,
        "src_px": 2048,
+       "fit": "",
        "caption": "",
        "original": "05_Ashna_3.jpg"
       }
@@ -128,6 +133,7 @@
        "w": 1200,
        "h": 1600,
        "src_px": 2048,
+       "fit": "",
        "caption": "",
        "original": "04_Marcos_1.jpg"
       }
@@ -150,6 +156,7 @@
        "w": 389,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "28_Grace_1.jpg"
       }
@@ -176,6 +183,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "32_Pavin_1.jpg"
       }
@@ -212,6 +220,7 @@
        "w": 960,
        "h": 636,
        "src_px": 960,
+       "fit": "",
        "caption": "",
        "original": "09_Wus-Wonton_1.png"
       }
@@ -248,6 +257,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "23_Mick_1.jpg"
       }
@@ -284,6 +294,7 @@
        "w": 1200,
        "h": 1600,
        "src_px": 2048,
+       "fit": "",
        "caption": "",
        "original": "08_Alan_1.png"
       }
@@ -320,6 +331,7 @@
        "w": 960,
        "h": 720,
        "src_px": 960,
+       "fit": "",
        "caption": "",
        "original": "06_Isabella_1.png"
       }
@@ -359,6 +371,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "19_Sam-Li_1.jpg"
       }
@@ -395,6 +408,7 @@
        "w": 960,
        "h": 720,
        "src_px": 960,
+       "fit": "",
        "caption": "",
        "original": "12_Hannah_2.png"
       },
@@ -405,6 +419,7 @@
        "w": 960,
        "h": 720,
        "src_px": 960,
+       "fit": "",
        "caption": "",
        "original": "12_Hannah_1.png"
       }
@@ -441,6 +456,7 @@
        "w": 1066,
        "h": 1600,
        "src_px": 2048,
+       "fit": "",
        "caption": "",
        "original": "05_Ashna_1.jpg"
       }
@@ -477,6 +493,7 @@
        "w": 500,
        "h": 375,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "25_Noah_1.jpg"
       }
@@ -513,6 +530,7 @@
        "w": 1200,
        "h": 1600,
        "src_px": 2048,
+       "fit": "",
        "caption": "",
        "original": "14_Kim_1.png"
       }
@@ -549,6 +567,7 @@
        "w": 720,
        "h": 960,
        "src_px": 960,
+       "fit": "",
        "caption": "",
        "original": "07_LJ_1.png"
       }
@@ -585,6 +604,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "26_Kaavya_1.jpg"
       }
@@ -595,6 +615,84 @@
   },
   {
    "num": 13,
+   "key": "gantry",
+   "name": "Gantry Plaza State Park",
+   "full_name": "",
+   "area": "Long Island City, Queens",
+   "region": "nyc",
+   "lat": 40.7420823,
+   "lng": -73.9604762,
+   "blurb": "",
+   "extra_pin": null,
+   "people": [
+    {
+     "id": 35,
+     "name": "Hannah Wang",
+     "relation": "",
+     "needs_name": false,
+     "message": [
+      "Was so fun hanging out in LIC! It was so funny when we were sitting by the pier and the random lady started speaking to us in Spanish and you were the only person who responded 😭 Even thought we don’t get to see each other often seeing you is always so fun!!"
+     ],
+     "photos": [
+      {
+       "web": "assets/photos/web/35-hannah-wang-1.jpg",
+       "thumb": "assets/photos/thumb/35-hannah-wang-1.jpg",
+       "print": "assets/photos/print/35-hannah-wang-1.jpg",
+       "w": 1200,
+       "h": 1600,
+       "src_px": 2816,
+       "fit": "",
+       "caption": "",
+       "original": "35_Hannah_Wang_1.jpg"
+      }
+     ],
+     "place": "gantry"
+    }
+   ]
+  },
+  {
+   "num": 14,
+   "key": "brooklynsteel",
+   "name": "Brooklyn Steel",
+   "full_name": "",
+   "area": "East Williamsburg, Brooklyn",
+   "region": "nyc",
+   "lat": 40.7193577,
+   "lng": -73.9387939,
+   "blurb": "Not a memory yet: the concert Hao Hao is still working on.",
+   "extra_pin": null,
+   "people": [
+    {
+     "id": 40,
+     "name": "Hao Hao",
+     "relation": "",
+     "needs_name": false,
+     "message": [
+      "HBD Julia!!",
+      "I can’t believe you’re turning older again and I’m not there to celebrate you with YOU! AGAIN! PJ has organised such an awesome surprise for you, but I am so regretfully embarrassed that after searching my entire camera roll WE DONT HAVE A SINGLE PHOTO TOGETHER?!?!",
+      "Anyways, this is what I hope us to look like if we ever got to go see a concert together, ideally @ Brooklyn Steel! (Don’t worry sweets, I’m working on it.)",
+      "Until then, I wish you an abundance of happiness, new inspirations, warm company, and peace this coming year. I can sense, it’s gonna be a bitchin’ good one 🌟!",
+      "很抱歉，不小心把咱们俩的衣服画成了红配绿。。。果然我不是设计师👩🏻‍🎨"
+     ],
+     "photos": [
+      {
+       "web": "assets/photos/web/40-hao-hao-1.jpg",
+       "thumb": "assets/photos/thumb/40-hao-hao-1.jpg",
+       "print": "assets/photos/print/40-hao-hao-1.jpg",
+       "w": 1600,
+       "h": 971,
+       "src_px": 1988,
+       "fit": "contain",
+       "caption": "no photo of the two of them yet, so she drew one",
+       "original": "40_Hao_Hao_1.png"
+      }
+     ],
+     "place": "brooklynsteel"
+    }
+   ]
+  },
+  {
+   "num": 15,
    "key": "mccarren",
    "name": "McCarren Park Greenmarket",
    "full_name": "",
@@ -625,6 +723,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "24_Gabby_1.jpg"
       }
@@ -634,7 +733,7 @@
    ]
   },
   {
-   "num": 14,
+   "num": 16,
    "key": "williamsburg",
    "name": "Williamsburg waterfront",
    "full_name": "",
@@ -661,6 +760,7 @@
        "w": 1115,
        "h": 1600,
        "src_px": 2048,
+       "fit": "",
        "caption": "",
        "original": "03_Alicia_1.jpg"
       }
@@ -670,7 +770,7 @@
    ]
   },
   {
-   "num": 15,
+   "num": 17,
    "key": "botanic",
    "name": "Brooklyn Botanic Garden",
    "full_name": "",
@@ -697,6 +797,7 @@
        "w": 1600,
        "h": 1200,
        "src_px": 2048,
+       "fit": "",
        "caption": "",
        "original": "13_Lareina_1.png"
       }
@@ -706,7 +807,7 @@
    ]
   },
   {
-   "num": 16,
+   "num": 18,
    "key": "oley",
    "name": "Oley",
    "full_name": "",
@@ -734,6 +835,7 @@
        "w": 310,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "33_Rachel_1.jpg"
       }
@@ -743,7 +845,7 @@
    ]
   },
   {
-   "num": 17,
+   "num": 19,
    "key": "beacon",
    "name": "Beacon",
    "full_name": "",
@@ -770,6 +872,7 @@
        "w": 500,
        "h": 375,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "17_Lance_1.jpg"
       }
@@ -792,6 +895,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "might be our only pic of just the two of us",
        "original": "20_Meagan_1.jpg"
       }
@@ -801,7 +905,7 @@
    ]
   },
   {
-   "num": 18,
+   "num": 20,
    "key": "hamptons",
    "name": "The Hamptons",
    "full_name": "",
@@ -828,6 +932,7 @@
        "w": 500,
        "h": 375,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "21_Jonathan_1.jpg"
       }
@@ -837,7 +942,45 @@
    ]
   },
   {
-   "num": 19,
+   "num": 21,
+   "key": "atlantic",
+   "name": "Out on the Atlantic",
+   "full_name": "",
+   "area": "Off Long Island, New York",
+   "region": "northeast",
+   "lat": 40.55,
+   "lng": -73.5,
+   "blurb": "",
+   "extra_pin": null,
+   "people": [
+    {
+     "id": 34,
+     "name": "John Wee",
+     "relation": "",
+     "needs_name": false,
+     "message": [
+      "Happy birthday Julia! Thanks for being such a thoughtful friend and also for the many fun memories this year.",
+      "Like when we went fishing and you thought you immediately caught a fish but it was just someone else’s bait."
+     ],
+     "photos": [
+      {
+       "web": "assets/photos/web/34-john-wee-1.jpg",
+       "thumb": "assets/photos/thumb/34-john-wee-1.jpg",
+       "print": "assets/photos/print/34-john-wee-1.jpg",
+       "w": 1200,
+       "h": 1600,
+       "src_px": 4032,
+       "fit": "",
+       "caption": "",
+       "original": "34_John_Wee_1.jpg"
+      }
+     ],
+     "place": "atlantic"
+    }
+   ]
+  },
+  {
+   "num": 22,
    "key": "harvard",
    "name": "Harvard",
    "full_name": "",
@@ -864,6 +1007,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "22_Dad_1.jpg"
       }
@@ -873,7 +1017,68 @@
    ]
   },
   {
-   "num": 20,
+   "num": 23,
+   "key": "boston",
+   "name": "Boston",
+   "full_name": "",
+   "area": "Massachusetts",
+   "region": "northeast",
+   "lat": 42.3555076,
+   "lng": -71.0565364,
+   "blurb": "",
+   "extra_pin": null,
+   "people": [
+    {
+     "id": 39,
+     "name": "Mariah",
+     "relation": "",
+     "needs_name": false,
+     "message": [
+      "Happy birthday, Julia! I’m sure you already know how much I admire you and adore everything that you do, but I’m going to keep saying it!! You’re such an inspiration to the people around you and I’m so grateful to be your friend. My favorite memory from our trip to Boston is falling asleep together on the couch at Jack’s Bar hahaha. Love you!!"
+     ],
+     "photos": [
+      {
+       "web": "assets/photos/web/39-mariah-1.jpg",
+       "thumb": "assets/photos/thumb/39-mariah-1.jpg",
+       "print": "assets/photos/print/39-mariah-1.jpg",
+       "w": 1170,
+       "h": 878,
+       "src_px": 1170,
+       "fit": "",
+       "caption": "",
+       "original": "39_Mariah_1.jpg"
+      }
+     ],
+     "place": "boston"
+    },
+    {
+     "id": 38,
+     "name": "Anouk",
+     "relation": "",
+     "needs_name": false,
+     "message": [
+      "HAPPY BIRTHDAY!!! I hope you have the most wonderful day. For some reason this is the only photo we have together this year but it was such a fun weekend we don’t even need photos to remember!! (Although you do still need to come to a Red Sox game with me). Your friendship is so important to me, you’re the most thoughtful and caring person I know. I’ve loved hearing about all the cool things you’ve done with Lupa Studios and all the cool people you’ve worked with and I know 24 will bring so many more opportunities for you. So sorry I can’t be there to celebrate with you in person but I’m always thinking about you and looking forward to the next time I get to see you!! Love you!",
+      "Anouk"
+     ],
+     "photos": [
+      {
+       "web": "assets/photos/web/38-anouk-1.jpg",
+       "thumb": "assets/photos/thumb/38-anouk-1.jpg",
+       "print": "assets/photos/print/38-anouk-1.jpg",
+       "w": 1182,
+       "h": 1576,
+       "src_px": 1576,
+       "fit": "",
+       "caption": "",
+       "original": "38_Anouk_1.jpg"
+      }
+     ],
+     "place": "boston"
+    }
+   ]
+  },
+  {
+   "num": 24,
    "key": "vancouver",
    "name": "Vancouver Thanksgiving",
    "full_name": "",
@@ -900,8 +1105,32 @@
        "w": 640,
        "h": 960,
        "src_px": 960,
+       "fit": "",
        "caption": "",
        "original": "10_Caroline_1.png"
+      }
+     ],
+     "place": "vancouver"
+    },
+    {
+     "id": 36,
+     "name": "Matty",
+     "relation": "",
+     "needs_name": false,
+     "message": [
+      "Happy 25th my beautiful Juju! You are such a star, and I am so lucky to be basking in your glow ⭐️ I hope you have the best year ever, and may you continue to do amazing and creative things! My favorite memory with you at 24 was in Vancouver for Thanksgiving! We are always bedmates, and this trip was no different. I distinctly remembering turning onto my side and waking up with you pressed up against me #BigSpoon #LOL 🥰🥄 I hope we are roomies in every lifetime! I LOVE YOU & HAPPY BIRTHDAY 🎂🎈"
+     ],
+     "photos": [
+      {
+       "web": "assets/photos/web/36-matty-1.jpg",
+       "thumb": "assets/photos/thumb/36-matty-1.jpg",
+       "print": "assets/photos/print/36-matty-1.jpg",
+       "w": 1200,
+       "h": 1600,
+       "src_px": 3307,
+       "fit": "",
+       "caption": "#BigSpoon",
+       "original": "36_Matty_1.jpg"
       }
      ],
      "place": "vancouver"
@@ -909,7 +1138,7 @@
    ]
   },
   {
-   "num": 21,
+   "num": 25,
    "key": "ginza",
    "name": "Seafood Buffet Ginza Happo",
    "full_name": "",
@@ -936,6 +1165,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "27_PJ_1.jpg"
       },
@@ -946,6 +1176,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "27_PJ_2.jpg"
       }
@@ -955,7 +1186,7 @@
    ]
   },
   {
-   "num": 22,
+   "num": 26,
    "key": "kiyomizu",
    "name": "Kiyomizu-dera",
    "full_name": "",
@@ -986,6 +1217,7 @@
        "w": 283,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "30_Jui_1.jpg"
       }
@@ -995,7 +1227,7 @@
    ]
   },
   {
-   "num": 23,
+   "num": 27,
    "key": "shinsaibashi",
    "name": "Shinsaibashi-suji",
    "full_name": "",
@@ -1022,6 +1254,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "29_Chris_1.jpg"
       }
@@ -1031,7 +1264,7 @@
    ]
   },
   {
-   "num": 24,
+   "num": 28,
    "key": "usj",
    "name": "Universal Studios Japan",
    "full_name": "",
@@ -1058,6 +1291,7 @@
        "w": 375,
        "h": 500,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "31_Mint_1.jpg"
       }
@@ -1067,7 +1301,7 @@
    ]
   },
   {
-   "num": 25,
+   "num": 29,
    "key": "chengdu",
    "name": "Chengdu",
    "full_name": "",
@@ -1094,6 +1328,7 @@
        "w": 500,
        "h": 333,
        "src_px": 500,
+       "fit": "",
        "caption": "",
        "original": "16_Tatiana_1.jpg"
       }
@@ -1103,7 +1338,7 @@
    ]
   },
   {
-   "num": 26,
+   "num": 30,
    "key": "manila",
    "name": "Robinsons Place Manila",
    "full_name": "",
@@ -1130,8 +1365,44 @@
        "w": 444,
        "h": 960,
        "src_px": 960,
+       "fit": "",
        "caption": "",
        "original": "11_Zoe_1.png"
+      }
+     ],
+     "place": "manila"
+    },
+    {
+     "id": 37,
+     "name": "Sabine",
+     "relation": "Beanie",
+     "needs_name": false,
+     "message": [
+      "HAPPY BIRTHDAY JUJU 💗💗 hope u have the awesomest birthday ever hehe i love love u so muchie and cant wait to celebrate your bday with u soon !!!! nyc will be so much fun !!!! heehee im thinking of new years eve and how you went under the table (two of them actually) to eat your grapes 😆 so cute and funny and so juju hehehe. see u soooo so super soon !!!!! LOVE U LOVE UUU",
+      "Love, Beanie 💗💗💗"
+     ],
+     "photos": [
+      {
+       "web": "assets/photos/web/37-sabine-1.jpg",
+       "thumb": "assets/photos/thumb/37-sabine-1.jpg",
+       "print": "assets/photos/print/37-sabine-1.jpg",
+       "w": 1200,
+       "h": 1600,
+       "src_px": 3307,
+       "fit": "",
+       "caption": "under the table on New Year's Eve, eating the grapes",
+       "original": "37_Sabine_1.jpg"
+      },
+      {
+       "web": "assets/photos/web/37-sabine-2.jpg",
+       "thumb": "assets/photos/thumb/37-sabine-2.jpg",
+       "print": "assets/photos/print/37-sabine-2.jpg",
+       "w": 1200,
+       "h": 1600,
+       "src_px": 2048,
+       "fit": "",
+       "caption": "",
+       "original": "37_Sabine_2.jpg"
       }
      ],
      "place": "manila"

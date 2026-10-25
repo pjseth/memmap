@@ -683,5 +683,146 @@
     ],
     "skipped_icon_files": [],
     "duplicate_notes": []
+  },
+  {
+    "id": 34,
+    "name": "John Wee",
+    "location": "North Atlantic Ocean",
+    "address": "Off Long Island, NY (~42 km from NYC, approximate)",
+    "lat": 40.55,
+    "lng": -73.5,
+    "confidence": "Approximate (live location from Find My screenshot; no fixed address)",
+    "message": "Happy birthday Julia! Thanks for being such a thoughtful friend and also for the many fun memories this year. \n\nLike when we went fishing and you thought you immediately caught a fish but it was just someone else’s bait. ",
+    "note": "Pin is approximate: user's Find My screenshot showed John Wee live in the North Atlantic off Long Island; generic offshore point used.",
+    "pin2_name": "",
+    "pin2_lat": null,
+    "pin2_lng": null,
+    "images": 1,
+    "photo_files": [
+      "photos/34_John_Wee_1.jpg"
+    ],
+    "skipped_icon_files": [],
+    "duplicate_notes": []
+  },
+  {
+    "id": 35,
+    "name": "Hannah Wang",
+    "location": "Gantry Plaza State Park pier, Long Island City, NYC",
+    "address": "4-44 47th Rd, Long Island City, NY 11101",
+    "lat": 40.7420823,
+    "lng": -73.9604762,
+    "confidence": "Approximate (LIC pier per her message; pinned to Gantry Plaza State Park)",
+    "message": "From NYC: was so fun hanging out in LIC! It was so funny when we were sitting by the pier and the random lady started speaking to us in Spanish and you were the only person who responded 😭 Even thought we don’t get to see each other often seeing you is always so fun!! ",
+    "note": "Distinct from entry 12 Hannah (Robinsons Place Manila).",
+    "pin2_name": "",
+    "pin2_lat": null,
+    "pin2_lng": null,
+    "images": 1,
+    "photo_files": [
+      "photos/35_Hannah_Wang_1.jpg"
+    ],
+    "skipped_icon_files": [],
+    "duplicate_notes": []
+  },
+  {
+    "id": 36,
+    "name": "Matty",
+    "location": "4500 Westwater Dr, Richmond, BC, Canada (Vancouver Thanksgiving, same pin as Zoe)",
+    "address": "4500 Westwater Dr, Richmond, BC V7E 6S1, Canada",
+    "lat": 49.1226613,
+    "lng": -123.1735004,
+    "confidence": "Exact (same location as Zoe, per user)",
+    "message": "Happy 25th my beautiful Juju! You are such a star, and I am so lucky to be basking in your glow ⭐️ I hope you have the best year ever, and may you continue to do amazing and creative things! My favorite memory with you at 24 was in Vancouver for Thanksgiving! We are always bedmates, and this trip was no different. I distinctly remembering turning onto my side and waking up with you pressed up against me #BigSpoon #LOL 🥰🥄 I hope we are roomies in every lifetime! I LOVE YOU & HAPPY BIRTHDAY 🎂🎈",
+    "note": "Same location as Zoe (entry 11), per user. Photo is the sleeping picture, per user.",
+    "pin2_name": "",
+    "pin2_lat": null,
+    "pin2_lng": null,
+    "images": 1,
+    "photo_files": [
+      "photos/36_Matty_1.jpg"
+    ],
+    "skipped_icon_files": [],
+    "duplicate_notes": []
+  },
+  {
+    "id": 37,
+    "name": "Sabine",
+    "location": "Robinsons Place Manila, Philippines",
+    "address": "Pedro Gil cor Adriatico St, Ermita, Manila",
+    "lat": 14.57584,
+    "lng": 120.98394,
+    "confidence": "Approximate (user wrote “Manila same location as Hannah”; matched to entry 12 Hannah's pin)",
+    "message": "HAPPY BIRTHDAY JUJU 💗💗 hope u have the awesomest birthday ever hehe i love love u so muchie and cant wait to celebrate your bday with u soon !!!! nyc will be so much fun !!!! heehee im thinking of new years eve and how you went under the table (two of them actually) to eat your grapes 😆 so cute and funny and so juju hehehe. see u soooo so super soon !!!!! LOVE U LOVE UUU\n\nLove, Beanie 💗💗💗",
+    "note": "Signed 'Love, Beanie'. User note said 'Manila same location as Hannah'; new entry 35 Hannah Wang is NYC, so pinned to Manila matching entry 12 Hannah.",
+    "pin2_name": "",
+    "pin2_lat": null,
+    "pin2_lng": null,
+    "images": 2,
+    "photo_files": [
+      "photos/37_Sabine_1.jpg",
+      "photos/37_Sabine_2.jpg"
+    ],
+    "skipped_icon_files": [],
+    "duplicate_notes": []
+  },
+  {
+    "id": 38,
+    "name": "Anouk",
+    "location": "Cambridge, MA",
+    "address": "Cambridge, MA, USA",
+    "lat": 42.3666036,
+    "lng": -71.1056916,
+    "confidence": "Approximate (user wrote “cambridge boston”; pinned to Cambridge)",
+    "message": "HAPPY BIRTHDAY!!! I hope you have the most wonderful day. For some reason this is the only photo we have together this year but it was such a fun weekend we don’t even need photos to remember!! (Although you do still need to come to a Red Sox game with me). Your friendship is so important to me, you’re the most thoughtful and caring person I know. I’ve loved hearing about all the cool things you’ve done with Lupa Studios and all the cool people you’ve worked with and I know 24 will bring so many more opportunities for you. So sorry I can’t be there to celebrate with you in person but I’m always thinking about you and looking forward to the next time I get to see you!! Love you!\nAnouk",
+    "note": "",
+    "pin2_name": "",
+    "pin2_lat": null,
+    "pin2_lng": null,
+    "images": 1,
+    "photo_files": [
+      "photos/38_Anouk_1.jpg"
+    ],
+    "skipped_icon_files": [],
+    "duplicate_notes": []
+  },
+  {
+    "id": 39,
+    "name": "Mariah",
+    "location": "Boston, MA",
+    "address": "Boston, MA, USA",
+    "lat": 42.3555076,
+    "lng": -71.0565364,
+    "confidence": "Approximate (user wrote “Boston cambridge”; pinned to Boston)",
+    "message": "Happy birthday, Julia! I’m sure you already know how much I admire you and adore everything that you do, but I’m going to keep saying it!! You’re such an inspiration to the people around you and I’m so grateful to be your friend. My favorite memory from our trip to Boston is falling asleep together on the couch at Jack’s Bar hahaha. Love you!!",
+    "note": "Her message names Jack's Bar in Boston; exact bar not verified.",
+    "pin2_name": "",
+    "pin2_lat": null,
+    "pin2_lng": null,
+    "images": 1,
+    "photo_files": [
+      "photos/39_Mariah_1.jpg"
+    ],
+    "skipped_icon_files": [],
+    "duplicate_notes": []
+  },
+  {
+    "id": 40,
+    "name": "Hao Hao",
+    "location": "Brooklyn Steel, Brooklyn, NYC",
+    "address": "319 Frost St, Brooklyn, NY 11222",
+    "lat": 40.7193577,
+    "lng": -73.9387939,
+    "confidence": "Exact (venue named by user)",
+    "message": "My birthday note to dear Julia:\n\nHBD Julia!! \n\nI can’t believe you’re turning older again and I’m not there to celebrate you with YOU! AGAIN! PJ has organised such an awesome surprise for you, but I am so regretfully embarrassed that after searching my entire camera roll WE DONT HAVE A SINGLE PHOTO TOGETHER?!?! \n\nAnyways, this is what I hope us to look like if we ever got to go see a concert together, ideally @ Brooklyn Steel! (Don’t worry sweets, I’m working on it.)\n\nUntil then, I wish you an abundance of happiness, new inspirations, warm company, and peace this coming year. I can sense, it’s gonna be a bitchin’ good one 🌟!\n\n很抱歉，不小心把咱们俩的衣服画成了红配绿。。。果然我不是设计师👩🏻‍🎨",
+    "note": "Photo is her drawing (she wrote that they have no real photo together).",
+    "pin2_name": "",
+    "pin2_lat": null,
+    "pin2_lng": null,
+    "images": 1,
+    "photo_files": [
+      "photos/40_Hao_Hao_1.png"
+    ],
+    "skipped_icon_files": [],
+    "duplicate_notes": []
   }
 ]

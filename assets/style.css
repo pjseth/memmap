@@ -200,6 +200,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .polaroid:nth-child(even) { transform: rotate(1.6deg); }
 .polaroid:hover { transform: rotate(0) scale(1.02); }
 .polaroid img { width: 100%; display: block; max-height: 380px; object-fit: cover; background: var(--paper-2); }
+.polaroid img.fit-whole { height: auto; max-height: 420px; object-fit: contain; }
 .polaroid figcaption { font-family: var(--hand); font-size: 18px; text-align: center; margin-top: 6px; color: var(--muted); }
 .no-photo {
   border: 2px dashed var(--line); border-radius: 8px; padding: 18px; text-align: center;

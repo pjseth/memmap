@@ -22,6 +22,7 @@ const readJSON = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 
 await prepGeo();
 const data = readJSON(path.join(ROOT, "data", "memmap.json"));
+const nPeople = data.places.reduce((n, pl) => n + pl.people.length, 0);
 
 // ---------------------------------------------------------------- palette
 const C = {
@@ -348,7 +349,7 @@ add(`<g id="badges">${badges.join("")}</g>`);
 add(`<text x="${CX}" y="196" text-anchor="middle" class="t-display" font-size="150" font-weight="560" letter-spacing="-2" fill="${C.ink}">Julia at <tspan fill="${C.tomato}" font-style="italic">24</tspan></text>`);
 add(`<text x="${CX}" y="258" text-anchor="middle" class="t-display" font-size="30" font-style="italic" font-weight="400" fill="${C.muted}">${esc(data.subtitle)}</text>`);
 add(`<text x="${CX - 640}" y="110" text-anchor="middle" transform="rotate(-8 ${CX - 640} 110)" class="t-hand" font-size="46" font-weight="700" fill="${C.tomato}">happy 25th!</text>`);
-add(`<text x="${CX + 640}" y="108" text-anchor="middle" transform="rotate(7 ${CX + 640} 108)" class="t-hand" font-size="40" font-weight="600" fill="${C.deep}">33 notes · 26 places</text>`);
+add(`<text x="${CX + 640}" y="108" text-anchor="middle" transform="rotate(7 ${CX + 640} 108)" class="t-hand" font-size="40" font-weight="600" fill="${C.deep}">${nPeople} notes · ${data.places.length} places</text>`);
 
 // a note set along the southern ocean
 {
@@ -391,9 +392,9 @@ fs.writeFileSync(path.join(HERE, "poster.html"), `<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
 <style>
-  @page { size: 18in 24in; margin: 0; }
+  @page { size: 30in 40in; margin: 0; }
   html, body { margin: 0; padding: 0; background: ${C.paper}; }
-  svg { display: block; width: 18in; height: 24in; }
+  svg { display: block; width: 30in; height: 40in; }
   @media screen { svg { width: 100vw; height: auto; } }
 </style></head>
 <body>

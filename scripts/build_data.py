@@ -64,13 +64,28 @@ PEOPLE = {
     31: dict(name="Mint", photos=["31_Mint_1.jpg"]),
     32: dict(name="Pavin", photos=["32_Pavin_1.jpg"]),
     33: dict(name="Rachel", photos=["33_Rachel_1.jpg"]),
+    34: dict(name="John Wee", photos=["34_John_Wee_1.jpg"]),
+    35: dict(name="Hannah Wang", photos=["35_Hannah_Wang_1.jpg"]),
+    36: dict(name="Matty", photos=["36_Matty_1.jpg"],
+             captions={"36_Matty_1.jpg": "#BigSpoon"}),
+    37: dict(name="Sabine", relation="Beanie", photos=["37_Sabine_1.jpg", "37_Sabine_2.jpg"],
+             captions={"37_Sabine_1.jpg": "under the table on New Year's Eve, eating the grapes"}),
+    38: dict(name="Anouk", photos=["38_Anouk_1.jpg"]),
+    39: dict(name="Mariah", photos=["39_Mariah_1.jpg"]),
+    40: dict(name="Hao Hao", photos=["40_Hao_Hao_1.png"],
+             captions={"40_Hao_Hao_1.png": "no photo of the two of them yet, so she drew one"}),
 }
 
 # Photos that arrived sideways (degrees clockwise).
-ROTATE_CW = {"27_PJ_1.jpg": 90, "27_PJ_2.jpg": 90}
+ROTATE_CW = {"27_PJ_1.jpg": 90, "27_PJ_2.jpg": 90, "40_Hao_Hao_1.png": 270}
+
+# Photos that must be shown whole (drawings, wide art): no centre crop in the card.
+FIT_CONTAIN = {"40_Hao_Hao_1.png"}
 
 # Where to centre square pin crops (fraction of height; faces sit high).
-THUMB_FOCUS_Y = {"01_Ella_1.png": 0.35, "11_Zoe_1.png": 0.45, "28_Grace_1.jpg": 0.4}
+THUMB_FOCUS_Y = {"01_Ella_1.png": 0.35, "11_Zoe_1.png": 0.45, "28_Grace_1.jpg": 0.4,
+                 "35_Hannah_Wang_1.jpg": 0.58, "36_Matty_1.jpg": 0.5,
+                 "37_Sabine_1.jpg": 0.5, "40_Hao_Hao_1.png": 0.5}
 
 # --------------------------------------------------------------------------
 # Message clean-up: strip location headers people typed for PJ, and put back
@@ -92,6 +107,8 @@ MESSAGE_FIXES = {
     21: [(re.compile(r"^the hamptons\n+"), "")],
     27: [(re.compile(r"^universal studios japan\n"), "")],
     31: [(re.compile(r"^Universal studios Japan\n+"), "")],
+    35: [(re.compile(r"^From NYC: was"), "Was")],
+    40: [(re.compile(r"^My birthday note to dear Julia:\n+"), "")],
 }
 
 # --------------------------------------------------------------------------
@@ -124,6 +141,11 @@ PLACES = [
          lat=40.77235, lng=-73.97159, people=[8]),
     dict(key="sonic", name="Sonic", area="Long Island City, Queens", region="nyc",
          lat=40.74387, lng=-73.92778, people=[26]),
+    dict(key="gantry", name="Gantry Plaza State Park", area="Long Island City, Queens", region="nyc",
+         lat=40.7420823, lng=-73.9604762, people=[35]),
+    dict(key="brooklynsteel", name="Brooklyn Steel", area="East Williamsburg, Brooklyn", region="nyc",
+         lat=40.7193577, lng=-73.9387939, people=[40],
+         blurb="Not a memory yet: the concert Hao Hao is still working on."),
     dict(key="mccarren", name="McCarren Park Greenmarket", area="Williamsburg, Brooklyn", region="nyc",
          lat=40.72104, lng=-73.95135, people=[24],
          extra_pin=dict(name="Oberon & the secret tunnel", lat=40.71869, lng=-73.95487)),
@@ -137,11 +159,15 @@ PLACES = [
          lat=41.50482, lng=-73.96958, people=[17, 20]),
     dict(key="hamptons", name="The Hamptons", area="Long Island, New York", region="northeast",
          lat=40.92462, lng=-72.35479, people=[21]),
+    dict(key="atlantic", name="Out on the Atlantic", area="Off Long Island, New York", region="northeast",
+         lat=40.55, lng=-73.5, people=[34]),
     dict(key="harvard", name="Harvard", area="Cambridge, Massachusetts", region="northeast",
          lat=42.37444, lng=-71.11825, people=[22]),
+    dict(key="boston", name="Boston", area="Massachusetts", region="northeast",
+         lat=42.3555076, lng=-71.0565364, people=[39, 38]),
     # Private home: city-level pin only.
     dict(key="vancouver", name="Vancouver Thanksgiving", area="Richmond, British Columbia", region="world",
-         lat=49.123, lng=-123.174, people=[11]),
+         lat=49.123, lng=-123.174, people=[11, 36]),
     dict(key="ginza", name="Seafood Buffet Ginza Happo", area="Ginza, Tokyo", region="world",
          lat=35.66721, lng=139.76182, people=[27]),
     dict(key="kiyomizu", name="Kiyomizu-dera", area="Kyoto, Japan", region="world",
@@ -153,7 +179,7 @@ PLACES = [
     dict(key="chengdu", name="Chengdu", area="Sichuan, China", region="world",
          lat=30.57226, lng=104.06651, people=[16]),
     dict(key="manila", name="Robinsons Place Manila", area="Manila, Philippines", region="world",
-         lat=14.57584, lng=120.98394, people=[12],
+         lat=14.57584, lng=120.98394, people=[12, 37],
          blurb="This year lived in iMessage and Instagram DMs."),
 ]
 
@@ -206,7 +232,7 @@ def save_thumb(im, path, fname, size=320):
 
 
 def main():
-    raw = {e["id"]: e for e in json.load(open(os.path.join(SRC, "mem map data FINAL (33 entries).json")))}
+    raw = {e["id"]: e for e in json.load(open(os.path.join(SRC, "mem map data FINAL (40 entries).json"), encoding="utf-8"))}
     for sub in ("web", "thumb", "print"):
         os.makedirs(os.path.join(OUT_ASSETS, sub), exist_ok=True)
 
@@ -224,6 +250,7 @@ def main():
                 thumb=f"assets/photos/thumb/{base}.jpg",
                 print=f"assets/photos/print/{base}.jpg",
                 w=w, h=h, src_px=max(im.size),
+                fit="contain" if fname in FIT_CONTAIN else "",
                 caption=meta.get("captions", {}).get(fname, ""),
                 original=fname,
             ))
@@ -263,9 +290,9 @@ def main():
         places=places,
     )
     os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
-    with open(os.path.join(ROOT, "data", "memmap.json"), "w") as f:
+    with open(os.path.join(ROOT, "data", "memmap.json"), "w", encoding="utf-8", newline="\n") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
-    with open(os.path.join(ROOT, "assets", "data.js"), "w") as f:
+    with open(os.path.join(ROOT, "assets", "data.js"), "w", encoding="utf-8", newline="\n") as f:
         f.write("// Generated by scripts/build_data.py. Edit that script, not this file.\n")
         f.write("window.MEMMAP = " + json.dumps(data, ensure_ascii=False) + ";\n")
     print(f"{len(places)} places, {sum(len(p['people']) for p in places)} people, "

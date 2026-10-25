@@ -29,10 +29,29 @@ REGIONS = [
 COUNTRY = {"vancouver": "Canada", "ginza": "Japan", "kiyomizu": "Japan", "shinsaibashi": "Japan",
            "usj": "Japan", "chengdu": "China", "manila": "Philippines"}
 
-# Labels on the "seen from home" map page; the four Japan pins share one label.
-PIN_LABELS = {"oley": "16 Oley", "beacon": "17 Beacon", "hamptons": "18 The Hamptons", "harvard": "19 Harvard",
-              "vancouver": "20 Vancouver", "ginza": "21\u201324 Japan", "kiyomizu": "", "shinsaibashi": "",
-              "usj": "", "chengdu": "25 Chengdu", "manila": "26 Manila"}
+# Labels on the "seen from home" map page. Stop numbers come from the data;
+# these only shorten a name, blank it out, or (via PIN_SPANS) fold a run of pins
+# into one label -- the four Japan pins share one.
+PIN_NAMES = {"hamptons": "The Hamptons", "atlantic": "The Atlantic", "harvard": "Boston",
+             "boston": "", "vancouver": "Vancouver",
+             "ginza": "Japan", "kiyomizu": "", "shinsaibashi": "", "usj": "",
+             "manila": "Manila"}
+# One label covers this pin through that one (pins that land on top of each other
+# at this scale: the four Japan stops, and Cambridge + Boston).
+PIN_SPANS = {"ginza": "usj", "harvard": "boston"}
+
+
+def pin_label(place, places):
+    """'25-28 Japan' / '21 The Atlantic' / '' for a pin folded into the one before it."""
+    name = PIN_NAMES.get(place["key"], place["name"])
+    if not name:
+        return ""
+    span_to = PIN_SPANS.get(place["key"])
+    if span_to:
+        last = next(q["num"] for q in places if q["key"] == span_to)
+        return f"{place['num']}\u2013{last} {name}"
+    return f"{place['num']} {name}"
+
 
 # Content box of a 5.5 x 8.5 in page with the @page margins below.
 CONTENT_W = 4.5
@@ -91,14 +110,16 @@ def motif_svg(places, size=300, with_labels=False, pin_numbers=False):
         pts.append((c + r * math.sin(b), c - r * math.cos(b), p))
     for x, y, p in pts[1:]:
         out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="#E4572E" stroke="#FBF5EA" stroke-width="1"/>')
-        label = PIN_LABELS.get(p["key"], p["name"])
+        label = pin_label(p, places)
         if pin_numbers and p["region"] != "nyc" and label:
             dx = 5 if x >= c else -5
             anchor = "start" if x >= c else "end"
             out.append(f'<text x="{x + dx:.1f}" y="{y + 2.2:.1f}" text-anchor="{anchor}" class="pin-lab">'
                        f'{esc(label)}</text>')
     if pin_numbers:
-        out.append(f'<text x="{c}" y="{c + 15}" text-anchor="middle" class="pin-lab home">New York (1&ndash;15)</text>')
+        nyc = [p["num"] for p in places if p["region"] == "nyc"]
+        out.append(f'<text x="{c}" y="{c + 15}" text-anchor="middle" class="pin-lab home">')
+        out.append(f'New York ({min(nyc)}&ndash;{max(nyc)})</text>')
     out.append(f'<circle cx="{c}" cy="{c}" r="5" fill="#F2B630" stroke="#2A2420" stroke-width="1"/>')
     out.append("</svg>")
     return "".join(out)
@@ -390,7 +411,7 @@ def filler(kind, places):
 
 
 def build(pages, fillers=0):
-    data = json.load(open(os.path.join(ROOT, "data", "memmap.json")))
+    data = json.load(open(os.path.join(ROOT, "data", "memmap.json"), encoding="utf-8"))
     body = [cover(data), intro(data), directory(data, pages)]
     for i, p in enumerate(data["places"]):
         body.append(place_section(p, i))
@@ -413,14 +434,14 @@ def build(pages, fillers=0):
 </body>
 </html>
 """
-    with open(os.path.join(HERE, "pamphlet.html"), "w") as f:
+    with open(os.path.join(HERE, "pamphlet.html"), "w", encoding="utf-8", newline="\n") as f:
         f.write(doc)
 
 
 if __name__ == "__main__":
     pages = {}
     if "--pages" in sys.argv:
-        pages = json.load(open(sys.argv[sys.argv.index("--pages") + 1]))
+        pages = json.load(open(sys.argv[sys.argv.index("--pages") + 1], encoding="utf-8"))
     fillers = int(sys.argv[sys.argv.index("--fillers") + 1]) if "--fillers" in sys.argv else 0
     build(pages, fillers)
     print("wrote pamphlet/pamphlet.html")
